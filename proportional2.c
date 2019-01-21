@@ -18,13 +18,13 @@ void loop()
     power = (int)(kp*(double)cte + ki*(double)(totcte) + kd*(double)(cte - lastcte));
     if(power>0)
     {
-        motor(1,100+power);
-        motor(2,-power);
+        motor(1,power);
+        motor(2,100-power);
     }  
     else if(power<0)
     {
-        motor(1,power);
-        motor(2,100-power);
+        motor(1,100-(-power));
+        motor(2,-power);
     }
     else
     {
