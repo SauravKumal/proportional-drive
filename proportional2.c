@@ -6,7 +6,7 @@ int cte =0;
 int lastcte =0;
 int totcte=0;
 int power =0;
-double kp=14.2857, ki=0,kd=0;
+double kp=14.2857, ki=0.001,kd=1;
 void setup()  
 {
 }
@@ -34,6 +34,7 @@ void loop()
     lastcte = cte;
     totcte +=cte;
     lcd(" ");
+
 }
 
 void calcCte()
